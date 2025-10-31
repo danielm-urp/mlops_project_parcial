@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/Maestria%20-%20URP/MLOps/mlops_project/mlruns/589804847076409935/8b7be8d265d940468af5a83bef326484/artifacts
+end_time: 1761888559470
+entry_point_name: ''
+experiment_id: '589804847076409935'
+lifecycle_stage: active
+run_id: 8b7be8d265d940468af5a83bef326484
+run_name: skittish-colt-285
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761888558901
+status: 4
+tags: []
+user_id: Intel

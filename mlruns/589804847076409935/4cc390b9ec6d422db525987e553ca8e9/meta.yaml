@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/Maestria%20-%20URP/MLOps/mlops_project/mlruns/589804847076409935/4cc390b9ec6d422db525987e553ca8e9/artifacts
+end_time: 1761888732496
+entry_point_name: ''
+experiment_id: '589804847076409935'
+lifecycle_stage: active
+run_id: 4cc390b9ec6d422db525987e553ca8e9
+run_name: clean-toad-585
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761888726411
+status: 3
+tags: []
+user_id: Intel

@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/Maestria%20-%20URP/MLOps/mlops_project/mlruns/589804847076409935/c7aadaaab6c6494aa30c80695901c5f4/artifacts
+end_time: 1761888691036
+entry_point_name: ''
+experiment_id: '589804847076409935'
+lifecycle_stage: active
+run_id: c7aadaaab6c6494aa30c80695901c5f4
+run_name: powerful-sponge-836
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761888690605
+status: 4
+tags: []
+user_id: Intel
