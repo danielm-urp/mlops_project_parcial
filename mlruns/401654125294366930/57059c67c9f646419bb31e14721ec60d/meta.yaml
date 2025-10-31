@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/Maestria%20-%20URP/MLOps/mlops_project/mlruns/401654125294366930/57059c67c9f646419bb31e14721ec60d/artifacts
+end_time: 1761918962600
+entry_point_name: ''
+experiment_id: '401654125294366930'
+lifecycle_stage: active
+run_id: 57059c67c9f646419bb31e14721ec60d
+run_name: honorable-moth-477
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761918953872
+status: 3
+tags: []
+user_id: Intel

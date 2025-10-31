@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   preprocess:
-    cmd: python src/preprocessing.py
+    cmd: venv\Scripts\python.exe src/preprocessing.py
     deps:
     - path: data/raw/Data_CU_venta.csv
       hash: md5
@@ -21,7 +21,7 @@ stages:
       md5: 97f85be2b177f407aa8e21a4848b8bb4
       size: 27739411
   train:
-    cmd: python src/train.py
+    cmd: venv\Scripts\python.exe src/train.py
     deps:
     - path: data/processed/train.csv
       hash: md5
@@ -29,15 +29,15 @@ stages:
       size: 27739411
     - path: src/train.py
       hash: md5
-      md5: b4383c75bd5687e4eb14106846de99ce
-      size: 764
+      md5: 9e6bfe38b5497541e0843f9349179998
+      size: 4838
     outs:
     - path: models/model.pkl
       hash: md5
-      md5: 605cf0c6d1fd6d5a6e9cad5ed4934c2e
-      size: 3447
+      md5: 81d527409c5fef7a84fd862a94a0b6ac
+      size: 6127488
   monitor_drift:
-    cmd: python src/monitor_drift.py
+    cmd: venv\Scripts\python.exe src/monitor_drift.py
     deps:
     - path: data/processed/test.csv
       hash: md5
@@ -54,5 +54,5 @@ stages:
     outs:
     - path: output/data_drift/data_drift_report.html
       hash: md5
-      md5: 15e83e18f48cff104082cdfe9ad4084a
+      md5: 63c4ca1b3a9fab846a4768dfaac2370e
       size: 9526116

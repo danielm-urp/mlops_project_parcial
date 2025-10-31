@@ -1,0 +1,10 @@
+artifact_location: file:///E:/Maestria%20-%20URP/MLOps/mlops_project/mlruns/589804847076409935/models/m-bbef1517598343a3b21c474dbcdd4108/artifacts
+creation_timestamp: 1761918668744
+experiment_id: '589804847076409935'
+last_updated_timestamp: 1761918673307
+model_id: m-bbef1517598343a3b21c474dbcdd4108
+model_type: null
+name: model
+source_run_id: 9ebbadfd8a6e41b5b8458286e77ef923
+status: 2
+status_message: null

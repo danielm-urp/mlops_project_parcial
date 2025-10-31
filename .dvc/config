@@ -1,0 +1,4 @@
+[core]
+    remote = local_storage
+['remote "local_storage"']
+    url = e:\Maestria - URP\MLOps\dvc_remote_storage

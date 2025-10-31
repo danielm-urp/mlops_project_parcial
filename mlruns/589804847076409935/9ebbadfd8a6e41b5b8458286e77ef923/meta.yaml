@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/Maestria%20-%20URP/MLOps/mlops_project/mlruns/589804847076409935/9ebbadfd8a6e41b5b8458286e77ef923/artifacts
+end_time: 1761918673325
+entry_point_name: ''
+experiment_id: '589804847076409935'
+lifecycle_stage: active
+run_id: 9ebbadfd8a6e41b5b8458286e77ef923
+run_name: nimble-ray-265
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761918661761
+status: 3
+tags: []
+user_id: Intel

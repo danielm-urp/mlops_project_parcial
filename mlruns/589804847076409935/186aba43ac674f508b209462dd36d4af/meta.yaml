@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/Maestria%20-%20URP/MLOps/mlops_project/mlruns/589804847076409935/186aba43ac674f508b209462dd36d4af/artifacts
+end_time: 1761918867032
+entry_point_name: ''
+experiment_id: '589804847076409935'
+lifecycle_stage: active
+run_id: 186aba43ac674f508b209462dd36d4af
+run_name: marvelous-asp-865
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761918860295
+status: 4
+tags: []
+user_id: Intel

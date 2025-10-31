@@ -1,6 +1,6 @@
 stages:
   preprocess:
-    cmd: python src/preprocessing.py
+    cmd: venv\Scripts\python.exe src/preprocessing.py
     deps:
     - data/raw/Data_CU_venta.csv
     - src/preprocessing.py
@@ -8,14 +8,14 @@ stages:
     - data/processed/test.csv
     - data/processed/train.csv
   train:
-    cmd: python src/train.py
+    cmd: venv\Scripts\python.exe src/train.py
     deps:
     - data/processed/train.csv
     - src/train.py
     outs:
     - models/model.pkl
   monitor_drift:
-    cmd: python src/monitor_drift.py
+    cmd: venv\Scripts\python.exe src/monitor_drift.py
     deps:
     - data/processed/test.csv
     - data/processed/train.csv
