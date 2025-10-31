@@ -1,0 +1,24 @@
+stages:
+  preprocess:
+    cmd: python src/preprocessing.py
+    deps:
+    - data/raw/Data_CU_venta.csv
+    - src/preprocessing.py
+    outs:
+    - data/processed/test.csv
+    - data/processed/train.csv
+  train:
+    cmd: python src/train.py
+    deps:
+    - data/processed/train.csv
+    - src/train.py
+    outs:
+    - models/model.pkl
+  monitor_drift:
+    cmd: python src/monitor_drift.py
+    deps:
+    - data/processed/test.csv
+    - data/processed/train.csv
+    - src/monitor_drift.py
+    outs:
+    - output/data_drift/data_drift_report.html

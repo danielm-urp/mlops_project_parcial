@@ -1,0 +1,58 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python src/preprocessing.py
+    deps:
+    - path: data/raw/Data_CU_venta.csv
+      hash: md5
+      md5: fdd106a1c6d2b3d1233a5b5527e22dde
+      size: 54525952
+    - path: src/preprocessing.py
+      hash: md5
+      md5: b11fd7b2f4becde3cafc066bd0152fda
+      size: 1462
+    outs:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 50b9042b582b7618158f1893a55ec40d
+      size: 6937232
+    - path: data/processed/train.csv
+      hash: md5
+      md5: 97f85be2b177f407aa8e21a4848b8bb4
+      size: 27739411
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/processed/train.csv
+      hash: md5
+      md5: 97f85be2b177f407aa8e21a4848b8bb4
+      size: 27739411
+    - path: src/train.py
+      hash: md5
+      md5: b4383c75bd5687e4eb14106846de99ce
+      size: 764
+    outs:
+    - path: models/model.pkl
+      hash: md5
+      md5: 605cf0c6d1fd6d5a6e9cad5ed4934c2e
+      size: 3447
+  monitor_drift:
+    cmd: python src/monitor_drift.py
+    deps:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 50b9042b582b7618158f1893a55ec40d
+      size: 6937232
+    - path: data/processed/train.csv
+      hash: md5
+      md5: 97f85be2b177f407aa8e21a4848b8bb4
+      size: 27739411
+    - path: src/monitor_drift.py
+      hash: md5
+      md5: 059fb5219d898312f963fa7445707a79
+      size: 524
+    outs:
+    - path: output/data_drift/data_drift_report.html
+      hash: md5
+      md5: 15e83e18f48cff104082cdfe9ad4084a
+      size: 9526116
