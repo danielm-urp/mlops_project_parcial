@@ -16,21 +16,25 @@ def train_model():
     
     mlflow.set_experiment("Mlops_RandomForest_Classification")
     with mlflow.start_run():
-        # Cargar datos
-        data = pd.read_csv('data/processed/train.csv')
-        X = data.drop('target', axis=1)
-        y = data['target']
+        # Cargar datos de entrenamiento
+        train_data = pd.read_csv('data/processed/train.csv')
+        X_train = train_data.drop('target', axis=1)
+        y_train = train_data['target']
+        
+        # Cargar datos de validación
+        val_data = pd.read_csv('data/processed/val.csv')
+        X_val = val_data.drop('target', axis=1)
+        y_val = val_data['target']
         
         # Log de información del dataset
-        class_distribution = y.value_counts()
-        mlflow.log_param("class_0_count", int(class_distribution[0]))
-        mlflow.log_param("class_1_count", int(class_distribution[1]))
-        mlflow.log_param("imbalance_ratio", float(class_distribution[0] / class_distribution[1]))
+        class_distribution_train = y_train.value_counts()
+        class_distribution_val = y_val.value_counts()
         
-        # Dividir en train/validation
-        X_train, X_val, y_train, y_val = train_test_split(
-            X, y, test_size=0.2, random_state=random_state, stratify=y
-        )
+        mlflow.log_param("train_class_0_count", int(class_distribution_train[0]))
+        mlflow.log_param("train_class_1_count", int(class_distribution_train[1]))
+        mlflow.log_param("val_class_0_count", int(class_distribution_val[0]))
+        mlflow.log_param("val_class_1_count", int(class_distribution_val[1]))
+        mlflow.log_param("imbalance_ratio", float(class_distribution_train[0] / class_distribution_train[1]))
         
         # Crear y configurar modelo con balanceo de clases
         model = RandomForestClassifier(

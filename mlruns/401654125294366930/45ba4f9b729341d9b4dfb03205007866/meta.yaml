@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/Maestria%20-%20URP/MLOps/mlops_project/mlruns/401654125294366930/45ba4f9b729341d9b4dfb03205007866/artifacts
+end_time: 1761960077594
+entry_point_name: ''
+experiment_id: '401654125294366930'
+lifecycle_stage: active
+run_id: 45ba4f9b729341d9b4dfb03205007866
+run_name: beautiful-midge-618
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761960065520
+status: 3
+tags: []
+user_id: Intel

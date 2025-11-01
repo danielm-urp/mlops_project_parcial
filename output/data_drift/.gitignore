@@ -1,1 +1,4 @@
 /data_drift_report.html
+/drift_train_vs_val.html
+/drift_train_vs_test.html
+/drift_val_vs_test.html
